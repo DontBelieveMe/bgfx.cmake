@@ -38,7 +38,6 @@ endif()
 add_library( bgfx STATIC ${BGFX_SOURCES} )
 
 # Enable BGFX_CONFIG_DEBUG in Debug configuration
-target_compile_definitions( bgfx PRIVATE "$<$<CONFIG:Debug>:BGFX_CONFIG_DEBUG=1>" )
 if(BGFX_CONFIG_DEBUG)
 	target_compile_definitions( bgfx PRIVATE BGFX_CONFIG_DEBUG=1)
 endif()
